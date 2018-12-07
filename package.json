@@ -1,0 +1,24 @@
+{
+  "name": "2dv512_a2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "database.js",
+  "dependencies": {
+    "line-by-line": "^0.1.6",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattiaswickberg/2dv512_a2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattiaswickberg/2dv512_a2/issues"
+  },
+  "homepage": "https://github.com/mattiaswickberg/2dv512_a2#readme"
+}
