@@ -5,6 +5,9 @@ var comments = []
 var readFile = function (file) {
   const lr = new Lbl(file)
   var count = 0
+  var totalcount = 0
+  var startTime = Date.now()
+
   lr.on('error', function (err) {
     console.log(err)
   })
@@ -18,12 +21,16 @@ var readFile = function (file) {
       database.insertComments(comments)
       comments = []
       count = 0
+      totalcount += 1000
       lr.resume()
     }
   })
 
   lr.on('end', function () {
-    console.log('Done!')
+    totalcount += count
+    database.insertComments(comments)
+    var time = Date.now() - startTime
+    console.log('Done in ' + time + ' milliseconds with ' + totalcount + ' rows inserted!')
   })
 }
 
